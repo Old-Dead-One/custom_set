@@ -11,7 +11,8 @@ class CustomSet:
     def remove(self, item):
         if item in self.item:
             self.item.remove(item)
-        raise Exception("Item not in set.")
+        else:
+            raise KeyError("Item not in set.")
 
     def as_list(self):
         return self.item
