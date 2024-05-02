@@ -9,10 +9,9 @@ class CustomSet:
             self.item.append(item)
 
     def remove(self, item):
-        try:
+        if item in self.item:
             self.item.remove(item)
-        except ValueError:
-            print("Item not in set, moving on.")
+        raise Exception("Item not in set.")
 
     def as_list(self):
         return self.item
